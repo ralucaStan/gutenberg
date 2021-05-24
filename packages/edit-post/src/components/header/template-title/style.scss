@@ -24,6 +24,15 @@
 
 	.edit-post-template-post-title {
 		margin-top: $grid-unit-05;
+		max-width: 160px;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: block;
+
+		@include break-xlarge() {
+			max-width: none;
+		}
 	}
 }
 
