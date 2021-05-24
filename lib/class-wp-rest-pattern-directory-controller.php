@@ -3,7 +3,7 @@
  * Start: Include for phase 2
  * Block Pattern Directory REST API: WP_REST_Pattern_Directory_Controller class
  *
- * @since   5.8.0
+ * @since 5.8.0
  * @package gutenberg
  */
 
@@ -166,8 +166,8 @@ class WP_REST_Pattern_Directory_Controller extends WP_REST_Controller {
 			'categories'     => array_map( 'sanitize_title', $raw_pattern->category_slugs ),
 			'keywords'       => array_map( 'sanitize_title', $raw_pattern->keyword_slugs ),
 			'description'    => sanitize_text_field( $raw_pattern->meta->wpop_description ),
-			'viewport_width' => absint( $raw_pattern->meta->wpop_viewport_width ),
-			'block_types'    => array_map( 'sanitize_text_field', $raw_pattern->meta->wpop_block_types ),
+			'viewportWidth' => absint( $raw_pattern->meta->wpop_viewport_width ),
+			'blockTypes'    => array_map( 'sanitize_text_field', $raw_pattern->meta->wpop_block_types ),
 		);
 
 		$prepared_pattern = $this->add_additional_fields_to_object( $prepared_pattern, $request );
@@ -247,13 +247,13 @@ class WP_REST_Pattern_Directory_Controller extends WP_REST_Controller {
 					'context'     => array( 'view', 'embed' ),
 				),
 
-				'viewport_width' => array(
+				'viewportWidth' => array(
 					'description' => __( 'The preferred width of the viewport when previewing a pattern, in pixels.', 'gutenberg' ),
 					'type'        => 'integer',
 					'context'     => array( 'view', 'embed' ),
 				),
 
-				'block_types' => array(
+				'blockTypes' => array(
 					'description' => __( 'A list of block types this pattern supports for transforms.', 'gutenberg' ),
 					'type'        => 'array',
 					'uniqueItems' => true,
