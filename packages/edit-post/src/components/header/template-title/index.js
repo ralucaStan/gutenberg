@@ -59,7 +59,6 @@ function TemplateTitle() {
 									isLink
 									showTooltip
 									label={ __( 'Edit ' ) + title }
-									aria-label={ __( 'Edit ' ) + title }
 									onClick={ () => {
 										clearSelectedBlock();
 										setIsEditingTemplate( false );
@@ -75,7 +74,6 @@ function TemplateTitle() {
 									showTooltip
 									onClick={ onToggle }
 									label={ __( 'Template Options' ) }
-									aria-label={ __( 'Template Options' ) }
 								>
 									{ templateTitle }
 								</Button>
