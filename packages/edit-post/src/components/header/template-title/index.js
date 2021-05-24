@@ -1,7 +1,7 @@
 /**
  * WordPress dependencies
  */
-import { __ } from '@wordpress/i18n';
+import { __, sprintf } from '@wordpress/i18n';
 import { useSelect, useDispatch } from '@wordpress/data';
 import { Dropdown, ToolbarItem, Button } from '@wordpress/components';
 import { chevronDown } from '@wordpress/icons';
@@ -58,7 +58,11 @@ function TemplateTitle() {
 									className="edit-post-template-post-title"
 									isLink
 									showTooltip
-									label={ __( 'Edit ' ) + title }
+									label={ sprintf(
+										/* translators: %s: Title of the referring post, e.g: "Hello World!" */
+										__( 'Edit %s' ),
+										title
+									) }
 									onClick={ () => {
 										clearSelectedBlock();
 										setIsEditingTemplate( false );
