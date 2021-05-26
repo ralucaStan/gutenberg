@@ -19,6 +19,7 @@
 	"include": [
 		"src/animate/**/*",
 		"src/base-control/**/*",
+		"src/card/**/*",
 		"src/dashicon/**/*",
 		"src/disabled/**/*",
 		"src/divider/**/*",
