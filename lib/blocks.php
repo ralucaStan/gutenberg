@@ -412,3 +412,36 @@ function gutenberg_block_has_support( $block_type, $feature, $default = false ) 
 
 	return true === $block_support || is_array( $block_support );
 }
+
+/**
+ * Updates the shape of supports for declaring fontSize and lineHeight.
+ *
+ * @param array $metadata Metadata for registering a block type.
+ * @return array          Metadata for registering a block type with the supports shape updated.
+ */
+function gutenberg_migrate_old_typography_shape( $metadata ) {
+	if ( isset( $metadata['supports'] ) ) {
+		$font_size_support   = _wp_array_get( $metadata['supports'], array( 'fontSize' ), null );
+		$line_height_support = _wp_array_get( $metadata['supports'], array( 'lineHeight' ), null );
+		if ( null !== $font_size_support ) {
+			trigger_error(
+				sprintf( __( 'Block %s is declaring fontSize support on block.json under supports.fontSize. Font size support is now declared under supports.typography.fontSize.', 'gutenberg' ), $metadata['name'] ),
+				headers_sent() || WP_DEBUG ? E_USER_WARNING : E_USER_NOTICE
+			);
+			gutenberg_experimental_set( $metadata['supports'], array( 'typography', 'fontSize' ), $font_size_support );
+			unset( $metadata['supports']['fontSize'] );
+		}
+		if ( null !== $line_height_support ) {
+			trigger_error(
+				sprintf( __( 'Block %s is declaring lineHeight support on block.json under supports.lineHeight. Line height support is now declared under supports.typography.lineHeight.', 'gutenberg' ), $metadata['name'] ),
+				headers_sent() || WP_DEBUG ? E_USER_WARNING : E_USER_NOTICE
+			);
+			gutenberg_experimental_set( $metadata['supports'], array( 'typography', 'lineHeight' ), $line_height_support );
+			unset( $metadata['supports']['lineHeight'] );
+		}
+	}
+	return $metadata;
+}
+
+
+add_filter( 'block_type_metadata', 'gutenberg_migrate_old_typography_shape' );
