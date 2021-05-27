@@ -24,14 +24,14 @@ export default function WelcomeGuide( { sidebar } ) {
 			<img
 				className="customize-widgets-welcome-guide__image customize-widgets-welcome-guide__image__prm-np"
 				alt=""
-				src="images/block-editor/welcome-editor.gif"
+				src="https://s.w.org/images/block-editor/welcome-editor.gif"
 				width="312"
 				height="240"
 			/>
 			<img
 				className="customize-widgets-welcome-guide__image customize-widgets-welcome-guide__image__prm-r"
 				alt=""
-				src="images/block-editor/welcome-editor.svg"
+				src="https://s.w.org/images/block-editor/welcome-editor.svg"
 				width="312"
 				height="240"
 			/>

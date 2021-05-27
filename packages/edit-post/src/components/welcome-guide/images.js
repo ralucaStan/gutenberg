@@ -8,7 +8,7 @@ export const CanvasImage = ( props ) => (
 		<img
 			className="edit-post-welcome-guide__image edit-post-welcome-guide__image__prm-np"
 			alt=""
-			src="images/block-editor/welcome-canvas.gif"
+			src="https://s.w.org/images/block-editor/welcome-canvas.gif"
 			width="312"
 			height="240"
 			{ ...props }
@@ -16,7 +16,7 @@ export const CanvasImage = ( props ) => (
 		<img
 			className="edit-post-welcome-guide__image edit-post-welcome-guide__image__prm-r"
 			alt=""
-			src="images/block-editor/welcome-canvas.svg"
+			src="https://s.w.org/images/block-editor/welcome-canvas.svg"
 			width="312"
 			height="240"
 			{ ...props }
@@ -29,7 +29,7 @@ export const EditorImage = ( props ) => (
 		<img
 			className="edit-post-welcome-guide__image edit-post-welcome-guide__image__prm-np"
 			alt=""
-			src="images/block-editor/welcome-editor.gif"
+			src="https://s.w.org/images/block-editor/welcome-editor.gif"
 			width="312"
 			height="240"
 			{ ...props }
@@ -37,7 +37,7 @@ export const EditorImage = ( props ) => (
 		<img
 			className="edit-post-welcome-guide__image edit-post-welcome-guide__image__prm-r"
 			alt=""
-			src="images/block-editor/welcome-editor.svg"
+			src="https://s.w.org/images/block-editor/welcome-editor.svg"
 			width="312"
 			height="240"
 			{ ...props }
@@ -50,7 +50,7 @@ export const BlockLibraryImage = ( props ) => (
 		<img
 			className="edit-post-welcome-guide__image edit-post-welcome-guide__image__prm-np"
 			alt=""
-			src="images/block-editor/welcome-library.gif"
+			src="https://s.w.org/images/block-editor/welcome-library.gif"
 			width="312"
 			height="240"
 			{ ...props }
@@ -58,7 +58,7 @@ export const BlockLibraryImage = ( props ) => (
 		<img
 			className="edit-post-welcome-guide__image edit-post-welcome-guide__image__prm-r"
 			alt=""
-			src="images/block-editor/welcome-library.svg"
+			src="https://s.w.org/images/block-editor/welcome-library.svg"
 			width="312"
 			height="240"
 			{ ...props }
@@ -71,7 +71,7 @@ export const DocumentationImage = ( props ) => (
 		<img
 			className="edit-post-welcome-guide__image edit-post-welcome-guide__image__prm-np"
 			alt=""
-			src="images/block-editor/welcome-documentation.gif"
+			src="https://s.w.org/images/block-editor/welcome-documentation.gif"
 			width="312"
 			height="240"
 			{ ...props }
@@ -79,7 +79,7 @@ export const DocumentationImage = ( props ) => (
 		<img
 			className="edit-post-welcome-guide__image edit-post-welcome-guide__image__prm-r"
 			alt=""
-			src="images/block-editor/welcome-documentation.svg"
+			src="https://s.w.org/images/block-editor/welcome-documentation.svg"
 			width="312"
 			height="240"
 			{ ...props }
