@@ -51,7 +51,7 @@ const switchToTemplateMode = async () => {
 		'.edit-post-template-top-area',
 		( el ) => el.innerText
 	);
-	expect( title ).toContain( 'Another FSE Post\n' );
+	expect( title ).toContain( 'Just an FSE Post\n' );
 
 	await disableTemplateWelcomeGuide();
 };
